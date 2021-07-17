@@ -1,5 +1,6 @@
 ## Configurando o ambiente
 Criando uma aplicação NextJS com yarn
+
 ```$ yarn create next-app```
 
 Estrutura inicial manipulada
@@ -38,6 +39,7 @@ Criar o arquivo ```.editorconfig``` e aplicar dentro dele as configurações par
 É interessante ter o plugin instalado no editor para que os erros possam ser apresentados em tempo de escrita do código.
 
 Instalar o ESLint no projeto através do comando ```$ npx eslint --init```
+
 Selecionar as Opções:
 ```
 ? How would you like to use ESLint?
@@ -76,22 +78,28 @@ Informar dentro da estrutura de configuração a auto-detecção da versão do R
 #### Plugins ESLint (plugins/rules)
 
 eslint-plugin-react-hooks (```$ yarn add eslint-plugin-react-hooks --dev```)
+
 Plugin para suportar análise dos React Hooks
 
 react/prop-types
+
 Plugin para evitar erros de prop types do TypeScript
 
 react/react-in-jsx-scope
+
 React no NextJS é definido globalmente, define a não necessidade da importação do React nos componentes
 
 @typescript-eslint/explicit-module-boundary-types
+
 Não é necessário explicitar o retorno dos métodos quando o TypeScript já consegue inferir o tipo de retorno
 
 Criar dentro do ```package.json``` a entrada de script ```"lint" : "eslint src"``` que indica que, ao rodar o comando ```$ yarn lint``` o ESLint possa varrer toda a pasta src a procura de erros/warnings.
 
 ### Prettier com ESLint (prettier.io)
 Instalando ```$ yarn add --dev --exact prettier```
+
 Criar o arquivo ```.prettierrc```
+
 Incluir as regras de formatação de código.
 
 Instalar os plugins ```$ yarn add --dev eslint-plugin-prettier eslint-config-prettier``` e configurar dentro do ```extends``` do ESLint a importação dos plugins
@@ -99,7 +107,7 @@ Instalar os plugins ```$ yarn add --dev eslint-plugin-prettier eslint-config-pre
 Configurar o arquivo ```.vscode/settings.json``` de forma que o ESLint dispare a formação do código.
 
 ### git hook com Husky e Lint-Staged
-Previne que não sejam enviados para o repositório códigos ruins ou com lixo. Sendo necessário a correção destes warnings para que o código possa assim ser versionado.
+Previne que sejam enviados para o repositório códigos ruins ou com lixo. Sendo necessário a correção destes warnings para que o código possa assim ser versionado.
 
 Instalando
 ```
