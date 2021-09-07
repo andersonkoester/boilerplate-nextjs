@@ -134,3 +134,8 @@ Criar o comando e entradas no ```package.json```:
 ```
 
 ### Jest com Typescript
+```
+yarn add --dev jest
+yarn add --dev @babel/preset-typescript
+yarn add --dev @types/jest
+```
